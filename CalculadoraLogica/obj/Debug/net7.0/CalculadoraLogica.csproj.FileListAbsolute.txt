@@ -1,0 +1,15 @@
+C:\Users\lucaz\RiderProjects\CalculadoraLogica\CalculadoraLogica\bin\Debug\net7.0\CalculadoraLogica.exe
+C:\Users\lucaz\RiderProjects\CalculadoraLogica\CalculadoraLogica\bin\Debug\net7.0\CalculadoraLogica.deps.json
+C:\Users\lucaz\RiderProjects\CalculadoraLogica\CalculadoraLogica\bin\Debug\net7.0\CalculadoraLogica.runtimeconfig.json
+C:\Users\lucaz\RiderProjects\CalculadoraLogica\CalculadoraLogica\bin\Debug\net7.0\CalculadoraLogica.dll
+C:\Users\lucaz\RiderProjects\CalculadoraLogica\CalculadoraLogica\bin\Debug\net7.0\CalculadoraLogica.pdb
+C:\Users\lucaz\RiderProjects\CalculadoraLogica\CalculadoraLogica\obj\Debug\net7.0\CalculadoraLogica.csproj.AssemblyReference.cache
+C:\Users\lucaz\RiderProjects\CalculadoraLogica\CalculadoraLogica\obj\Debug\net7.0\CalculadoraLogica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucaz\RiderProjects\CalculadoraLogica\CalculadoraLogica\obj\Debug\net7.0\CalculadoraLogica.AssemblyInfoInputs.cache
+C:\Users\lucaz\RiderProjects\CalculadoraLogica\CalculadoraLogica\obj\Debug\net7.0\CalculadoraLogica.AssemblyInfo.cs
+C:\Users\lucaz\RiderProjects\CalculadoraLogica\CalculadoraLogica\obj\Debug\net7.0\CalculadoraLogica.csproj.CoreCompileInputs.cache
+C:\Users\lucaz\RiderProjects\CalculadoraLogica\CalculadoraLogica\obj\Debug\net7.0\CalculadoraLogica.dll
+C:\Users\lucaz\RiderProjects\CalculadoraLogica\CalculadoraLogica\obj\Debug\net7.0\refint\CalculadoraLogica.dll
+C:\Users\lucaz\RiderProjects\CalculadoraLogica\CalculadoraLogica\obj\Debug\net7.0\CalculadoraLogica.pdb
+C:\Users\lucaz\RiderProjects\CalculadoraLogica\CalculadoraLogica\obj\Debug\net7.0\CalculadoraLogica.genruntimeconfig.cache
+C:\Users\lucaz\RiderProjects\CalculadoraLogica\CalculadoraLogica\obj\Debug\net7.0\ref\CalculadoraLogica.dll
