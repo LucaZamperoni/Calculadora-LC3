@@ -24,6 +24,18 @@ public class TestProcesamiento
         expresion = "1-4/4";
         resultadoEsperado = 0.0;
         Assert.That(Procesamiento.ResolverExpresion(expresion), Is.EqualTo(resultadoEsperado));
+        
+        expresion = "0-(-4/4)"; // REVISAR - Agregar 0 adelante si el primer simbolo es un "-".
+        resultadoEsperado = 1.0;
+        Assert.That(Procesamiento.ResolverExpresion(expresion), Is.EqualTo(resultadoEsperado));
+        
+        expresion = "4-(5*(-1))";
+        resultadoEsperado = 9.0;
+        Assert.That(Procesamiento.ResolverExpresion(expresion), Is.EqualTo(resultadoEsperado));
+        
+        expresion = "4-(5*-1)";
+        resultadoEsperado = 9.0;
+        Assert.That(Procesamiento.ResolverExpresion(expresion), Is.EqualTo(resultadoEsperado));
 
         expresion = "1/-4";
         resultadoEsperado = -0.25;
