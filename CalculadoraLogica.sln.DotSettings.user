@@ -1,8 +1,0 @@
-﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6db08503_002Daabb_002D4243_002Dba64_002D77c535b0e442/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestResolverExpresion" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::D5371A8F-0441-4051-9D42-7B01B185BEB9::net7.0::CalculadoraTests.TestProcesamiento.TestResolverExpresion&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::D5371A8F-0441-4051-9D42-7B01B185BEB9::net7.0::CalculadoraTests.TestProcesamiento.TestResolverParentesis&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::D5371A8F-0441-4051-9D42-7B01B185BEB9::net7.0::CalculadoraTests.TestProcesamiento.TestResolverOperacion&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
