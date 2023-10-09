@@ -1,0 +1,11 @@
+D:\Proyectos\C#\nose\nose\bin\Debug\nose.exe.config
+D:\Proyectos\C#\nose\nose\bin\Debug\nose.exe
+D:\Proyectos\C#\nose\nose\bin\Debug\nose.pdb
+D:\Proyectos\C#\nose\nose\obj\Debug\nose.csproj.AssemblyReference.cache
+D:\Proyectos\C#\nose\nose\obj\Debug\nose.csproj.SuggestedBindingRedirects.cache
+D:\Proyectos\C#\nose\nose\obj\Debug\nose.Properties.Resources.resources
+D:\Proyectos\C#\nose\nose\obj\Debug\nose.csproj.GenerateResource.cache
+D:\Proyectos\C#\nose\nose\obj\Debug\nose.csproj.CoreCompileInputs.cache
+D:\Proyectos\C#\nose\nose\obj\Debug\nose.exe
+D:\Proyectos\C#\nose\nose\obj\Debug\nose.pdb
+D:\Proyectos\C#\nose\nose\obj\Debug\nose.Form1.resources

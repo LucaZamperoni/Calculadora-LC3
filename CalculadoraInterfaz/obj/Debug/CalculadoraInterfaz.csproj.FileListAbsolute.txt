@@ -1,0 +1,33 @@
+D:\Proyectos\C#\nose\CalculadoraInterfaz\bin\Debug\CalculadoraInterfaz.exe.config
+D:\Proyectos\C#\nose\CalculadoraInterfaz\bin\Debug\CalculadoraInterfaz.exe
+D:\Proyectos\C#\nose\CalculadoraInterfaz\bin\Debug\CalculadoraInterfaz.pdb
+D:\Proyectos\C#\nose\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.AssemblyReference.cache
+D:\Proyectos\C#\nose\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.SuggestedBindingRedirects.cache
+D:\Proyectos\C#\nose\CalculadoraInterfaz\obj\Debug\nose.CalculadoraForm.resources
+D:\Proyectos\C#\nose\CalculadoraInterfaz\obj\Debug\nose.Properties.Resources.resources
+D:\Proyectos\C#\nose\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.GenerateResource.cache
+D:\Proyectos\C#\nose\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.CoreCompileInputs.cache
+D:\Proyectos\C#\nose\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.exe
+D:\Proyectos\C#\nose\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.pdb
+D:\Proyectos\C#\CalcInterfaz - copia\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.AssemblyReference.cache
+D:\Proyectos\C#\CalcInterfaz - copia\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.SuggestedBindingRedirects.cache
+D:\Proyectos\C#\CalcInterfaz - copia\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.exe
+D:\Proyectos\C#\CalcInterfaz - copia\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.pdb
+D:\Proyectos\C#\CalcInterfaz - copia\CalculadoraInterfaz\bin\Debug\CalculadoraInterfaz.exe.config
+D:\Proyectos\C#\CalcInterfaz - copia\CalculadoraInterfaz\bin\Debug\CalculadoraInterfaz.exe
+D:\Proyectos\C#\CalcInterfaz - copia\CalculadoraInterfaz\bin\Debug\CalculadoraInterfaz.pdb
+D:\Proyectos\C#\CalcInterfaz - copia\CalculadoraInterfaz\obj\Debug\nose.CalculadoraForm.resources
+D:\Proyectos\C#\CalcInterfaz - copia\CalculadoraInterfaz\obj\Debug\nose.Properties.Resources.resources
+D:\Proyectos\C#\CalcInterfaz - copia\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.GenerateResource.cache
+D:\Proyectos\C#\CalcInterfaz - copia\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.CoreCompileInputs.cache
+D:\Proyectos\C#\CalcInterfaz\CalculadoraInterfaz\bin\Debug\CalculadoraInterfaz.exe.config
+D:\Proyectos\C#\CalcInterfaz\CalculadoraInterfaz\bin\Debug\CalculadoraInterfaz.exe
+D:\Proyectos\C#\CalcInterfaz\CalculadoraInterfaz\bin\Debug\CalculadoraInterfaz.pdb
+D:\Proyectos\C#\CalcInterfaz\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.AssemblyReference.cache
+D:\Proyectos\C#\CalcInterfaz\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.SuggestedBindingRedirects.cache
+D:\Proyectos\C#\CalcInterfaz\CalculadoraInterfaz\obj\Debug\nose.CalculadoraForm.resources
+D:\Proyectos\C#\CalcInterfaz\CalculadoraInterfaz\obj\Debug\nose.Properties.Resources.resources
+D:\Proyectos\C#\CalcInterfaz\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.GenerateResource.cache
+D:\Proyectos\C#\CalcInterfaz\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.CoreCompileInputs.cache
+D:\Proyectos\C#\CalcInterfaz\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.exe
+D:\Proyectos\C#\CalcInterfaz\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.pdb
