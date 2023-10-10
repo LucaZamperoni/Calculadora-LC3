@@ -53,6 +53,7 @@
             <DependentUpon>CalculadoraForm.cs</DependentUpon>
         </Compile>
         <Compile Include="logica\Procesamiento.cs" />
+        <Compile Include="logica\Test.cs" />
         <Compile Include="logica\Validaciones.cs" />
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
