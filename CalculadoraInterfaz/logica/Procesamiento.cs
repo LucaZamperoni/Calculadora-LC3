@@ -2,27 +2,34 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using nose.logica;
 
 public class Procesamiento
 {
-    public static double ResolverExpresion(string Expresion)
+    public static string ResolverExpresion(string Expresion)
     {
-        // Encierro la expresión dentro de paréntesis para que al final se tome como un cálculo más a realizar.
-        List<string> calculoCerrado = new List<string>();
-        calculoCerrado.Add("(");
-        calculoCerrado.Add(Expresion);
-        calculoCerrado.Add(")");
-        Expresion = string.Join("", calculoCerrado);
-        var caracteres = Expresion.ToCharArray();
-
-        // WHILE (hasta que no queden parentesis).
-        while (caracteres.Contains('('))
+        if (Test.Validar(Expresion))
         {
-            caracteres = ResolverParentesis(caracteres);
+            // Encierro la expresión dentro de paréntesis para que al final se tome como un cálculo más a realizar.
+            List<string> calculoCerrado = new List<string>();
+            calculoCerrado.Add("(");
+            calculoCerrado.Add(Expresion);
+            calculoCerrado.Add(")");
+            Expresion = string.Join("", calculoCerrado);
+            var caracteres = Expresion.ToCharArray();
+
+            // WHILE (hasta que no queden parentesis).
+            while (caracteres.Contains('('))
+            {
+                caracteres = ResolverParentesis(caracteres);
+            }
+
+            var resultadoCadena = new string(caracteres);
+            return resultadoCadena;
         }
 
-        var resultadoCadena = new string(caracteres);
-        return double.Parse(resultadoCadena);
+        return "Ha ocurrido un error";
+
     }
 
     public static char[] ResolverParentesis(char[] caracteres)
