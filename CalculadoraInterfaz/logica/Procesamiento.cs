@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using nose.logica;
@@ -10,7 +11,6 @@ public class Procesamiento
     {
         if (Test.Validar(Expresion))
         {
-            // Encierro la expresión dentro de paréntesis para que al final se tome como un cálculo más a realizar.
             List<string> calculoCerrado = new List<string>();
             calculoCerrado.Add("(");
             calculoCerrado.Add(Expresion);
@@ -18,7 +18,6 @@ public class Procesamiento
             Expresion = string.Join("", calculoCerrado);
             var caracteres = Expresion.ToCharArray();
 
-            // WHILE (hasta que no queden parentesis).
             while (caracteres.Contains('('))
             {
                 caracteres = ResolverParentesis(caracteres);
@@ -29,14 +28,10 @@ public class Procesamiento
         }
 
         return "Ha ocurrido un error";
-
     }
 
     public static char[] ResolverParentesis(char[] caracteres)
     {
-        // - FOR (encuentra primer parentesis interno).
-        // - - FOR (llena el calculo y lo pasa a la funcion).
-        // - - - ResolverOperacion y reemplazar operacion por resultado.
         for (int i = 0; i < caracteres.Length; i++)
         {
             if (!caracteres[i].Equals('(')) continue;
@@ -45,19 +40,15 @@ public class Procesamiento
             {
                 if (caracteres[j].Equals(')'))
                 {
-                    operacion.Add(caracteres[j]); // Agrego el ultimo parentesis.
-
+                    operacion.Add(caracteres[j]);
                     var resultado = ResolverOperacion(operacion);
-
-                    // Reemplazar parentesis por resultado.
                     var expresionCadena = new string(caracteres);
                     var operacionCadena = new string(operacion.ToArray());
                     expresionCadena = expresionCadena.Replace(operacionCadena, resultado.ToString());
-
                     return expresionCadena.ToCharArray();
                 }
 
-                if (caracteres[j].Equals('(')) // Si encuentro otro parentesis significa que hay otra operación interna.
+                if (caracteres[j].Equals('('))
                 {
                     break;
                 }
@@ -76,19 +67,26 @@ public class Procesamiento
         var operadores = new List<char>();
         var numero = new StringBuilder();
 
-        // Separo la operación en números y en operadores.
-        // Luego los números (hasta el momento char individuales) se utilizan para conformar el número completo.
         for (int i = 0; i < operacion.Count; i++)
         {
             if (char.IsDigit(operacion[i]) || operacion[i].Equals('.'))
             {
-                numero.Append(operacion[i]);
+                // Establece una cultura con punto como separador decimal
+                CultureInfo culture = new CultureInfo("en-US");
+
+                if (operacion[i].Equals('.'))
+                {
+                    numero.Append('.');
+                }
+                else
+                {
+                    numero.Append(operacion[i]);
+                }
             }
             else
             {
                 if (operadoresPosibles.Contains(operacion[i]))
                 {
-                    // Si el operador es un "-", reviso el caracter anterior para saber si se trata de un numero negativo.
                     if (operacion[i].Equals('-') && (operadoresPosibles.Contains(operacion[i - 1]) ||
                                                      operacion[i - 1].Equals('(')))
                     {
@@ -102,24 +100,23 @@ public class Procesamiento
                 try
                 {
                     if (numero.Length <= 0) continue;
-                    numeros.Add(double.Parse(numero.ToString()));
+                    numeros.Add(double.Parse(numero.ToString(), CultureInfo.InvariantCulture)); // Usa CultureInfo.InvariantCulture para evitar problemas de coma/punto
                     numero.Clear();
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("La operación esta mal Redactada.");
+                    Console.WriteLine("La operación está mal redactada.");
                     throw;
                 }
             }
         }
 
-        // Conformo la nueva operación (en formato cadena) combinando números completos y operadores.
         var aux = new List<string>();
         for (int i = 0; i < numeros.Count + operadores.Count; i++)
         {
             if (i < numeros.Count)
             {
-                aux.Add(numeros[i].ToString());
+                aux.Add(numeros[i].ToString(CultureInfo.InvariantCulture)); // Usa CultureInfo.InvariantCulture para asegurarte de que se use punto como separador decimal
             }
 
             if (i < operadores.Count)
@@ -128,15 +125,13 @@ public class Procesamiento
             }
         }
 
-        mostrarArreglo(aux, "Cuenta simple a Resolver: ");
+        mostrarArreglo(aux, "Cuenta simple a resolver: ");
 
-        // Resuelvo las cuentas simples hasta que la lista original tenga sólo un número.
-        // (Misma lógica que resolver todos los paréntesis de la expresión).
         do
         {
             aux = ResolverCuentaSimple(aux);
         } while (aux.Count > 1);
-        return double.Parse(aux[0]);
+        return double.Parse(aux[0], CultureInfo.InvariantCulture); // Usa CultureInfo.InvariantCulture para asegurarte de que se use punto como separador decimal
     }
 
     public static List<string> ResolverCuentaSimple(List<string> aux)
@@ -144,51 +139,48 @@ public class Procesamiento
         double resultado;
         for (int i = 0; i < aux.Count; i++)
         {
-            // Primero se resuelven las multiplicaciones y divisiones.
             switch (aux[i])
             {
                 case "*":
-                    resultado = double.Parse(aux[i - 1]) * double.Parse(aux[i + 1]);
+                    resultado = double.Parse(aux[i - 1], CultureInfo.InvariantCulture) * double.Parse(aux[i + 1], CultureInfo.InvariantCulture);
                     aux.RemoveAt(i);
                     aux.RemoveAt(i);
-                    aux[i - 1] = resultado.ToString();
-                    mostrarArreglo(aux, "Multiplicacion:");
+                    aux[i - 1] = resultado.ToString(CultureInfo.InvariantCulture);
+                    mostrarArreglo(aux, "Multiplicación:");
                     break;
                 case "/":
                     try
                     {
-                        resultado = double.Parse(aux[i - 1]) / double.Parse(aux[i + 1]);
+                        resultado = double.Parse(aux[i - 1], CultureInfo.InvariantCulture) / double.Parse(aux[i + 1], CultureInfo.InvariantCulture);
                         aux.RemoveAt(i);
                         aux.RemoveAt(i);
-                        aux[i - 1] = resultado.ToString();
-                        mostrarArreglo(aux, "Division:");
+                        aux[i - 1] = resultado.ToString(CultureInfo.InvariantCulture);
+                        mostrarArreglo(aux, "División:");
                     }
-                    catch (ArithmeticException e)
+                    catch (DivideByZeroException)
                     {
-                        Console.WriteLine("Estas tratando de dividir por 0.");
+                        Console.WriteLine("Estás tratando de dividir por 0.");
                     }
-
                     break;
             }
         }
 
-        // Solo quedan por resolver las sumas y restas.
         for (int i = 0; i < aux.Count; i++)
         {
             switch (aux[i])
             {
                 case "+":
-                    resultado = double.Parse(aux[i - 1]) + double.Parse(aux[i + 1]);
+                    resultado = double.Parse(aux[i - 1], CultureInfo.InvariantCulture) + double.Parse(aux[i + 1], CultureInfo.InvariantCulture);
                     aux.RemoveAt(i);
                     aux.RemoveAt(i);
-                    aux[i - 1] = resultado.ToString();
+                    aux[i - 1] = resultado.ToString(CultureInfo.InvariantCulture);
                     mostrarArreglo(aux, "Suma:");
                     break;
                 case "-":
-                    resultado = double.Parse(aux[i - 1]) - double.Parse(aux[i + 1]);
+                    resultado = double.Parse(aux[i - 1], CultureInfo.InvariantCulture) - double.Parse(aux[i + 1], CultureInfo.InvariantCulture);
                     aux.RemoveAt(i);
                     aux.RemoveAt(i);
-                    aux[i - 1] = resultado.ToString();
+                    aux[i - 1] = resultado.ToString(CultureInfo.InvariantCulture);
                     mostrarArreglo(aux, "Resta:");
                     break;
             }
@@ -200,9 +192,9 @@ public class Procesamiento
     public static void mostrarArreglo<T>(List<T> arr, string mensaje)
     {
         Console.WriteLine(mensaje);
-        foreach (var _ in arr)
+        foreach (var item in arr)
         {
-            Console.Write($"[{_}]");
+            Console.Write($"[{item}] ");
         }
 
         Console.WriteLine();

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace nose
@@ -8,6 +9,11 @@ namespace nose
         public CalculadoraForm()
         {
             InitializeComponent();
+
+            // Establecer la cultura con punto como separador decimal
+            CultureInfo culture = new CultureInfo("en-US");
+            System.Threading.Thread.CurrentThread.CurrentCulture = culture;
+            System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
         }
 
 

@@ -31,3 +31,14 @@ D:\Proyectos\C#\CalcInterfaz\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.c
 D:\Proyectos\C#\CalcInterfaz\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.CoreCompileInputs.cache
 D:\Proyectos\C#\CalcInterfaz\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.exe
 D:\Proyectos\C#\CalcInterfaz\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.pdb
+D:\IDE\RiderProyects\Calculadora-LC3\CalculadoraInterfaz\bin\Debug\CalculadoraInterfaz.exe.config
+D:\IDE\RiderProyects\Calculadora-LC3\CalculadoraInterfaz\bin\Debug\CalculadoraInterfaz.exe
+D:\IDE\RiderProyects\Calculadora-LC3\CalculadoraInterfaz\bin\Debug\CalculadoraInterfaz.pdb
+D:\IDE\RiderProyects\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.AssemblyReference.cache
+D:\IDE\RiderProyects\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.SuggestedBindingRedirects.cache
+D:\IDE\RiderProyects\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\nose.CalculadoraForm.resources
+D:\IDE\RiderProyects\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\nose.Properties.Resources.resources
+D:\IDE\RiderProyects\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.GenerateResource.cache
+D:\IDE\RiderProyects\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.CoreCompileInputs.cache
+D:\IDE\RiderProyects\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.exe
+D:\IDE\RiderProyects\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.pdb
