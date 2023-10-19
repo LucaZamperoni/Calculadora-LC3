@@ -50,7 +50,11 @@ public class Procesamiento
                 if (caracteres[j].Equals(')'))
                 {
                     operacion.Add(caracteres[j]); // Agrego el ultimo parentesis.
-
+                    if (operacion.Count<3)
+                    {
+                        throw new Exception("Hay un paréntesis vacío");
+                    }
+                    
                     var resultado = ResolverOperacion(operacion);
 
                     // Reemplazar parentesis por resultado.
@@ -183,7 +187,7 @@ public class Procesamiento
         }
         catch (Exception exception)
         {
-            throw new Exception(exception.Message);
+            throw new Exception("error");
         }
         
 
