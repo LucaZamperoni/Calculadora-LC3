@@ -59,14 +59,21 @@ public abstract class Validaciones
             {
                 throw new Exception("El operador inicial de la cuenta es invalido");
             }
-
+            
             if (!EsOperadorInicial(caracteres, c))
             {
                 if (EsOperadorFinal(caracteres, c) || !operandosValidos.Contains(caracteres[i - 1]) ||
                     !operandosValidos.Contains(caracteres[i + 1]))
                 {
                     throw new Exception("Los operadores estan posicionados de manera incorrecta");
+                }else if (c.Equals('*') || c.Equals('/'))
+                {
+                    if ((caracteres[i - 1] == '(') || caracteres[i + 1] == ')')
+                    {
+                        throw new Exception("Los operadores están posicionados de manera incorrecta");
+                    }
                 }
+
             }
         }
 
