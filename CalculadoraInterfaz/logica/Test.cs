@@ -4,15 +4,37 @@ namespace nose.logica
 {
     public class Test
     {
-        public static bool Validar(string expresion)
+        public static void Validar(string expresion)
         {
             if (expresion.Contains("("))
             {
-                return Validaciones.EsValida(expresion) && Test1(expresion);
+                try
+                {
+                    if (Validaciones.EsValida(expresion) && Test1(expresion))
+                    {
+                        return;
+                    }
+                }
+                catch (Exception exception)
+                {
+                    throw new Exception(exception.Message);
+                }
+                
+                
             }
             else
             {
-                return Validaciones.EsValida(expresion);
+                try
+                {
+                    if (Validaciones.EsValida((expresion)))
+                    {
+                        return;
+                    }
+                }
+                catch (Exception exception)
+                {
+                    throw new Exception(exception.Message);
+                }
             }
         }
 

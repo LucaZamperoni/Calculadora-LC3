@@ -10,138 +10,76 @@ namespace nose
             InitializeComponent();
         }
 
+        bool resuelto = true;
 
-        private void btn0_Click(object sender, EventArgs e)
+        private void escribir(string numOrOp)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
+            Console.WriteLine(resuelto +" "+ numOrOp);
+            if (resuelto)
             {
-                lblResult.Text = "0";
+                lblResult.Text = numOrOp;
+                resuelto = false;
             }
             else
             {
-                lblResult.Text += "0";
+                lblResult.Text += numOrOp;
             }
+        }
+
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            escribir("0");
         }
 
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
-            {
-                lblResult.Text = "1";
-            }
-            else
-            {
-                lblResult.Text += "1";
-            }
+            escribir("1");
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
-            {
-                lblResult.Text = "2";
-            }
-            else
-            {
-                lblResult.Text += "2";
-            }
+            escribir("2");
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
-            {
-                lblResult.Text = "3";
-            }
-            else
-            {
-                lblResult.Text += "3";
-            }
+            escribir("3");
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
-            {
-                lblResult.Text = "4";
-            }
-            else
-            {
-                lblResult.Text += "4";
-            }
+            escribir("4");
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
-            {
-                lblResult.Text = "5";
-            }
-            else
-            {
-                lblResult.Text += "5";
-            }
+            escribir("5");
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
-            {
-                lblResult.Text = "6";
-            }
-            else
-            {
-                lblResult.Text += "6";
-            }
+            escribir("6");
         }
 
         private void btn7_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
-            {
-                lblResult.Text = "7";
-            }
-            else
-            {
-                lblResult.Text += "7";
-            }
+            escribir("7");
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
-            {
-                lblResult.Text = "8";
-            }
-            else
-            {
-                lblResult.Text += "8";
-            }
+            escribir("8");
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
-            {
-                lblResult.Text = "9";
-            }
-            else
-            {
-                lblResult.Text += "9";
-            }
+            escribir("9");
         }
 
         private void btnDot_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
-            {
-                lblResult.Text = ".";
-            }
-            else
-            {
-                lblResult.Text += ".";
-            }
+            escribir(".");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -153,6 +91,7 @@ namespace nose
             catch (Exception exception)
             {
                 Console.WriteLine("Estas intentando borrar algo que no tiene nada");
+                resuelto = true;
             }
         }
 
@@ -163,80 +102,47 @@ namespace nose
 
         private void btnLeft_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
-            {
-                lblResult.Text = "(";
-            }
-            else
-            {
-                lblResult.Text += "(";
-            }
+            escribir("(");
         }
 
         private void btnRight_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
-            {
-                lblResult.Text = ")";
-            }
-            else
-            {
-                lblResult.Text += ")";
-            }
+            escribir(")");
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
-            {
-                lblResult.Text = "+";
-            }
-            else
-            {
-                lblResult.Text += "+";
-            }
+            escribir("+");
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
-            {
-                lblResult.Text = "-";
-            }
-            else
-            {
-                lblResult.Text += "-";
-            }
+            escribir("-");
         }
 
         private void btnMult_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
-            {
-                lblResult.Text = "*";
-            }
-            else
-            {
-                lblResult.Text += "*";
-            }
+            escribir("*");
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text == "Ha ocurrido un error")
-            {
-                lblResult.Text = "/";
-            }
-            else
-            {
-                lblResult.Text += "/";
-            }
+            escribir("/");
         }
 
         private void btnResult_Click(object sender, EventArgs e)
         {
-            var result = Procesamiento.ResolverExpresion(lblResult.Text);
-            lblResult.Text = result.ToString();
+            resuelto = true;
+            try
+            {
+                var result = Procesamiento.ResolverExpresion(lblResult.Text);
+                lblResult.Text = result.ToString();
+            }
+            catch (Exception exception)
+            {
+                lblResult.Text = exception.Message;
+            }
+            
         }
     }
 }

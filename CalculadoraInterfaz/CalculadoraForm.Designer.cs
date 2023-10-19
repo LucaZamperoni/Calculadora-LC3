@@ -29,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculadoraForm));
             this.btn1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblResult = new System.Windows.Forms.Label();
@@ -71,16 +72,16 @@
             this.panel1.Controls.Add(this.lblResult);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(312, 100);
+            this.panel1.Size = new System.Drawing.Size(418, 100);
             this.panel1.TabIndex = 1;
             // 
             // lblResult
             // 
-            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResult.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblResult.Location = new System.Drawing.Point(28, 35);
+            this.lblResult.Location = new System.Drawing.Point(21, 34);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(259, 35);
+            this.lblResult.Size = new System.Drawing.Size(377, 31);
             this.lblResult.TabIndex = 0;
             // 
             // btn2
@@ -218,9 +219,9 @@
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.SystemColors.Info;
-            this.btnReset.Location = new System.Drawing.Point(330, 12);
+            this.btnReset.Location = new System.Drawing.Point(436, 12);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(206, 100);
+            this.btnReset.Size = new System.Drawing.Size(100, 100);
             this.btnReset.TabIndex = 14;
             this.btnReset.Text = "AC";
             this.btnReset.UseVisualStyleBackColor = false;
@@ -319,6 +320,8 @@
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "CalculadoraForm";
             this.Text = "Calculadora";
             this.panel1.ResumeLayout(false);

@@ -8,8 +8,9 @@ public class Procesamiento
 {
     public static string ResolverExpresion(string Expresion)
     {
-        if (Test.Validar(Expresion))
+        try
         {
+            Test.Validar((Expresion));
             // Encierro la expresión dentro de paréntesis para que al final se tome como un cálculo más a realizar.
             List<string> calculoCerrado = new List<string>();
             calculoCerrado.Add("(");
@@ -26,10 +27,12 @@ public class Procesamiento
 
             var resultadoCadena = new string(caracteres);
             return resultadoCadena;
+
         }
-
-        return "Ha ocurrido un error";
-
+        catch (Exception exception)
+        {
+            return exception.Message;
+        }
     }
 
     public static char[] ResolverParentesis(char[] caracteres)
@@ -107,8 +110,7 @@ public class Procesamiento
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("La operación esta mal Redactada.");
-                    throw;
+                    throw new Exception("La operacion esta mal redactada");
                 }
             }
         }
@@ -142,57 +144,69 @@ public class Procesamiento
     public static List<string> ResolverCuentaSimple(List<string> aux)
     {
         double resultado;
-        for (int i = 0; i < aux.Count; i++)
+        try
         {
-            // Primero se resuelven las multiplicaciones y divisiones.
-            switch (aux[i])
+            for (int i = 0; i < aux.Count; i++)
             {
-                case "*":
-                    resultado = double.Parse(aux[i - 1]) * double.Parse(aux[i + 1]);
-                    aux.RemoveAt(i);
-                    aux.RemoveAt(i);
-                    aux[i - 1] = resultado.ToString();
-                    mostrarArreglo(aux, "Multiplicacion:");
-                    break;
-                case "/":
-                    try
-                    {
+                // Primero se resuelven las multiplicaciones y divisiones.
+                switch (aux[i])
+                {
+                    case "*":
+                        resultado = double.Parse(aux[i - 1]) * double.Parse(aux[i + 1]);
+                        aux.RemoveAt(i);
+                        aux.RemoveAt(i);
+                        aux[i - 1] = resultado.ToString();
+                        mostrarArreglo(aux, "Multiplicacion:");
+                        break;
+                    case "/":
+                        if (double.Parse(aux[i + 1]) == 0)
+                        {
+                            throw new Exception("No se puede dividir entre 0");
+                        }
                         resultado = double.Parse(aux[i - 1]) / double.Parse(aux[i + 1]);
                         aux.RemoveAt(i);
                         aux.RemoveAt(i);
                         aux[i - 1] = resultado.ToString();
                         mostrarArreglo(aux, "Division:");
-                    }
-                    catch (ArithmeticException e)
-                    {
-                        Console.WriteLine("Estas tratando de dividir por 0.");
-                    }
-
-                    break;
+                        break;
+                }
             }
         }
+        catch (Exception exception)
+        {
+            throw new Exception(exception.Message);
+        }
+        
 
         // Solo quedan por resolver las sumas y restas.
-        for (int i = 0; i < aux.Count; i++)
+        try
         {
-            switch (aux[i])
+            for (int i = 0; i < aux.Count; i++)
             {
-                case "+":
-                    resultado = double.Parse(aux[i - 1]) + double.Parse(aux[i + 1]);
-                    aux.RemoveAt(i);
-                    aux.RemoveAt(i);
-                    aux[i - 1] = resultado.ToString();
-                    mostrarArreglo(aux, "Suma:");
-                    break;
-                case "-":
-                    resultado = double.Parse(aux[i - 1]) - double.Parse(aux[i + 1]);
-                    aux.RemoveAt(i);
-                    aux.RemoveAt(i);
-                    aux[i - 1] = resultado.ToString();
-                    mostrarArreglo(aux, "Resta:");
-                    break;
+                switch (aux[i])
+                {
+                    case "+":
+                        resultado = double.Parse(aux[i - 1]) + double.Parse(aux[i + 1]);
+                        aux.RemoveAt(i);
+                        aux.RemoveAt(i);
+                        aux[i - 1] = resultado.ToString();
+                        mostrarArreglo(aux, "Suma:");
+                        break;
+                    case "-":
+                        resultado = double.Parse(aux[i - 1]) - double.Parse(aux[i + 1]);
+                        aux.RemoveAt(i);
+                        aux.RemoveAt(i);
+                        aux[i - 1] = resultado.ToString();
+                        mostrarArreglo(aux, "Resta:");
+                        break;
+                }
             }
         }
+        catch (Exception e)
+        {
+            throw new Exception("No fue posible resolver la operacion de suma/resta");
+        }
+        
 
         return aux;
     }

@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -27,6 +28,11 @@ public abstract class Validaciones
             }
         }
 
+        if (parentesis.Count != 0)
+        {
+            throw new Exception("Los parentesis estan mal cerrados");
+        }
+
         return parentesis.Count == 0;
     }
 
@@ -34,6 +40,10 @@ public abstract class Validaciones
     {
         char[] caracteresValidos =
             { '+', '-', '*', '/', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '(', ')', '.' };
+        if (!caracteres.All(c => caracteresValidos.Contains(c)))
+        {
+            throw new Exception("Hay caracteres dentro de la operacion que son invalidos");
+        }
         return caracteres.All(c => caracteresValidos.Contains(c));
     }
 
@@ -47,7 +57,7 @@ public abstract class Validaciones
             if (!operadoresValidos.Contains(c)) continue;
             if (EsOperadorInicial(caracteres, c) && (c.Equals('*') || c.Equals('/')))
             {
-                return false;
+                throw new Exception("El operador inicial de la cuenta es invalido");
             }
 
             if (!EsOperadorInicial(caracteres, c))
@@ -55,7 +65,7 @@ public abstract class Validaciones
                 if (EsOperadorFinal(caracteres, c) || !operandosValidos.Contains(caracteres[i - 1]) ||
                     !operandosValidos.Contains(caracteres[i + 1]))
                 {
-                    return false;
+                    throw new Exception("Los operadores estan posicionados de manera incorrecta");
                 }
             }
         }
@@ -75,6 +85,10 @@ public abstract class Validaciones
 
     public static bool ExpresionVacia(char[] caracteres)
     {
+        if (caracteres.Length == 0)
+        {
+            throw new Exception("La operacion esta vacia");
+        }
         return caracteres.Length == 0;
     }
 
