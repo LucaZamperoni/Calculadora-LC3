@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Globalization;
 
-namespace nose
+namespace Calculadora
 {
     public partial class CalculadoraForm : Form
     {
         public CalculadoraForm()
         {
             InitializeComponent();
+            CultureInfo culture = new CultureInfo("en-US");
+            System.Threading.Thread.CurrentThread.CurrentCulture = culture;
+            System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
         }
 
         bool resuelto = true;

@@ -36,9 +36,9 @@ D:\Proyectos\C#\Calculadora-LC3\CalculadoraInterfaz\bin\Debug\CalculadoraInterfa
 D:\Proyectos\C#\Calculadora-LC3\CalculadoraInterfaz\bin\Debug\CalculadoraInterfaz.pdb
 D:\Proyectos\C#\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.AssemblyReference.cache
 D:\Proyectos\C#\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.SuggestedBindingRedirects.cache
-D:\Proyectos\C#\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\nose.CalculadoraForm.resources
 D:\Proyectos\C#\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\nose.Properties.Resources.resources
 D:\Proyectos\C#\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.GenerateResource.cache
 D:\Proyectos\C#\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.csproj.CoreCompileInputs.cache
 D:\Proyectos\C#\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.exe
 D:\Proyectos\C#\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\CalculadoraInterfaz.pdb
+D:\Proyectos\C#\Calculadora-LC3\CalculadoraInterfaz\obj\Debug\Calculadora.CalculadoraForm.resources

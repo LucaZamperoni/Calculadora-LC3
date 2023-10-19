@@ -1,4 +1,4 @@
-﻿namespace nose
+﻿namespace Calculadora
 {
     partial class CalculadoraForm
     {

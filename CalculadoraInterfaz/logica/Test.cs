@@ -1,6 +1,6 @@
 using System;
 
-namespace nose.logica
+namespace Calculadora.logica
 {
     public class Test
     {

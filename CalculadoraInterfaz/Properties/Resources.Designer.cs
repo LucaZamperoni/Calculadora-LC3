@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace nose.Properties {
+namespace Calculadora.Properties {
     using System;
     
     

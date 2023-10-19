@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace nose
+namespace Calculadora
 {
     internal static class Program
     {

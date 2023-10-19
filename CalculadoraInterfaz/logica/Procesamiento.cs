@@ -2,7 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using nose.logica;
+using Calculadora.logica;
+using System.Globalization;
 
 public class Procesamiento
 {
@@ -85,7 +86,15 @@ public class Procesamiento
         {
             if (char.IsDigit(operacion[i]) || operacion[i].Equals('.'))
             {
-                numero.Append(operacion[i]);
+                CultureInfo culture = new CultureInfo("en-US");
+                if (operacion[i].Equals('.'))
+                {
+                    numero.Append('.');
+                }
+                else
+                {
+                    numero.Append(operacion[i]);
+                }
             }
             else
             {
@@ -105,7 +114,7 @@ public class Procesamiento
                 try
                 {
                     if (numero.Length <= 0) continue;
-                    numeros.Add(double.Parse(numero.ToString()));
+                    numeros.Add(double.Parse(numero.ToString(), CultureInfo.InvariantCulture));
                     numero.Clear();
                 }
                 catch (Exception e)
@@ -121,7 +130,7 @@ public class Procesamiento
         {
             if (i < numeros.Count)
             {
-                aux.Add(numeros[i].ToString());
+                aux.Add(numeros[i].ToString(CultureInfo.InvariantCulture));
             }
 
             if (i < operadores.Count)
@@ -138,7 +147,7 @@ public class Procesamiento
         {
             aux = ResolverCuentaSimple(aux);
         } while (aux.Count > 1);
-        return double.Parse(aux[0]);
+        return double.Parse(aux[0], CultureInfo.InvariantCulture);
     }
 
     public static List<string> ResolverCuentaSimple(List<string> aux)
@@ -152,10 +161,10 @@ public class Procesamiento
                 switch (aux[i])
                 {
                     case "*":
-                        resultado = double.Parse(aux[i - 1]) * double.Parse(aux[i + 1]);
+                        resultado = double.Parse(aux[i - 1], CultureInfo.InvariantCulture) * double.Parse(aux[i + 1], CultureInfo.InvariantCulture);
                         aux.RemoveAt(i);
                         aux.RemoveAt(i);
-                        aux[i - 1] = resultado.ToString();
+                        aux[i - 1] = resultado.ToString(CultureInfo.InvariantCulture);
                         mostrarArreglo(aux, "Multiplicacion:");
                         break;
                     case "/":
@@ -163,10 +172,10 @@ public class Procesamiento
                         {
                             throw new Exception("No se puede dividir entre 0");
                         }
-                        resultado = double.Parse(aux[i - 1]) / double.Parse(aux[i + 1]);
+                        resultado = double.Parse(aux[i - 1], CultureInfo.InvariantCulture) / double.Parse(aux[i + 1], CultureInfo.InvariantCulture);
                         aux.RemoveAt(i);
                         aux.RemoveAt(i);
-                        aux[i - 1] = resultado.ToString();
+                        aux[i - 1] = resultado.ToString(CultureInfo.InvariantCulture);
                         mostrarArreglo(aux, "Division:");
                         break;
                 }
@@ -186,17 +195,17 @@ public class Procesamiento
                 switch (aux[i])
                 {
                     case "+":
-                        resultado = double.Parse(aux[i - 1]) + double.Parse(aux[i + 1]);
+                        resultado = double.Parse(aux[i - 1], CultureInfo.InvariantCulture) + double.Parse(aux[i + 1], CultureInfo.InvariantCulture);
                         aux.RemoveAt(i);
                         aux.RemoveAt(i);
-                        aux[i - 1] = resultado.ToString();
+                        aux[i - 1] = resultado.ToString(CultureInfo.InvariantCulture);
                         mostrarArreglo(aux, "Suma:");
                         break;
                     case "-":
-                        resultado = double.Parse(aux[i - 1]) - double.Parse(aux[i + 1]);
+                        resultado = double.Parse(aux[i - 1], CultureInfo.InvariantCulture) - double.Parse(aux[i + 1], CultureInfo.InvariantCulture);
                         aux.RemoveAt(i);
                         aux.RemoveAt(i);
-                        aux[i - 1] = resultado.ToString();
+                        aux[i - 1] = resultado.ToString(CultureInfo.InvariantCulture);
                         mostrarArreglo(aux, "Resta:");
                         break;
                 }
