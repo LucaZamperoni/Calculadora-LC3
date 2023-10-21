@@ -79,9 +79,9 @@
             // 
             this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResult.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblResult.Location = new System.Drawing.Point(21, 34);
+            this.lblResult.Location = new System.Drawing.Point(20, 30);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(377, 31);
+            this.lblResult.Size = new System.Drawing.Size(377, 43);
             this.lblResult.TabIndex = 0;
             // 
             // btn2
